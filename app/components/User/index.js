@@ -7,7 +7,7 @@ export default class User extends React.Component {
             <div className="row">
                 <div className="col-xs-4">
                     <ul className="nav nav-tabs nav-stacked">
-                        <li><Link to="/user/list" >用户列表</Link></li>
+                        <li><Link to="/user/list" query={{orderBy:'id'}} >用户列表</Link></li>
                         <li><Link to="/user/add" >新增用户</Link></li>
                     </ul>
                 </div>

@@ -4,11 +4,13 @@ import {Router,Route,hashHistory,Link,IndexRoute,Redirect} from 'react-router';
 import { App } from './containers';
 import { Home,User,Profile,UserList,UserAdd,UserDetail } from './components';
 import 'bootstrap/dist/css/bootstrap.css';
-function handleEnter(){
-    console.log('handleEnter',arguments);
+function handleEnter(nextLocation){
+    if(nextLocation){
+        console.log(`页面即将切换到${nextLocation.location.pathname}`);
+    }
 }
-function handleLeave(){
-    console.log('handleLeave',arguments);
+function handleLeave(nextLocation){
+        console.log(`handleLeave`);
 }
 let root = document.getElementById('app');
 render(

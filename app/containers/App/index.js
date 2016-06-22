@@ -8,9 +8,9 @@ class App extends React.Component {
               <div className="container-fluid">
                   <div>
                       <ul className="nav navbar-nav">
-                          <li><Link to="/home" >首页</Link></li>
-                          <li><Link to="/user" >用户管理</Link></li>
-                          <li><Link to="/profile" >个人设置</Link></li>
+                          <li><Link activeStyle={{color:'red'}} to="/home" >首页</Link></li>
+                          <li><Link activeStyle={{color:'red'}}  to="/user" >用户管理</Link></li>
+                          <li><Link activeStyle={{color:'red'}}  to="/profile" >个人设置</Link></li>
                       </ul>
                   </div>
               </div>

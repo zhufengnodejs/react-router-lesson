@@ -4,7 +4,12 @@ import {Router,Route,hashHistory,Link,IndexRoute,Redirect} from 'react-router';
 import { App } from './containers';
 import { Home,User,Profile,UserList,UserAdd,UserDetail } from './components';
 import 'bootstrap/dist/css/bootstrap.css';
-
+function handleEnter(){
+    console.log('handleEnter',arguments);
+}
+function handleLeave(){
+    console.log('handleLeave',arguments);
+}
 let root = document.getElementById('app');
 render(
     <Router history={hashHistory} >
@@ -14,7 +19,7 @@ render(
             <Route path="user" component={User}>
                 <IndexRoute component={UserList}/>
                 <Route path="list" component={UserList}/>
-                <Route path="add" component={UserAdd}/>
+                <Route path="add" component={UserAdd} onEnter={handleEnter} onLeave={handleLeave}/>
                 <Route path="/detail/:id" component={UserDetail}/>
                 <Redirect from="detail/:id" to="/detail/:id"/>
             </Route>

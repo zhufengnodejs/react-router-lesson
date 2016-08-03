@@ -1,6 +1,17 @@
 import React from 'react';
 import {Link} from 'react-router';
 class App extends React.Component {
+    componentDidMount(){
+      console.log('App componentDidMount');
+    }
+
+    componentWillReceiveProps(){
+        console.log('App componentWillReceiveProps');
+    }
+
+    componentDidUpdate(){
+        console.log('App componentDidUpdate');
+    }
   render() {
     return (
       <div>

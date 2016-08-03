@@ -1,7 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router';
 export default class User extends React.Component {
-
+    componentDidMount(){
+        console.log('User componentDidMount');
+    }
     render() {
         return (
             <div className="row">
